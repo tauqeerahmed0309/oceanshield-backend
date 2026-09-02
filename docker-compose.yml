@@ -1,0 +1,105 @@
+version: "3.9"
+
+# ─────────────────────────────────────────────────────────────────
+# OceanShield AI — docker-compose
+#
+# Services:
+#   backend   → FastAPI on port 8000
+#   frontend  → Vite build served by nginx on port 5173
+#
+# Usage:
+#   docker-compose up --build          # first run (builds images)
+#   docker-compose up                  # subsequent runs
+#   docker-compose up -d               # detached / background
+#   docker-compose down                # stop and remove containers
+#   docker-compose down -v             # also wipe the data volume
+#
+# The data volume mounts the backend's data/db directory so your
+# JSON store (vessel positions, anomalies, incidents, etc.) survives
+# container restarts — no data is lost when you `docker-compose down`.
+# ─────────────────────────────────────────────────────────────────
+
+services:
+
+  # ── Backend (FastAPI + AIS ingestion + anomaly pipeline) ──────────
+  backend:
+    build:
+      context: ./oceanshield-backend
+      dockerfile: Dockerfile
+    container_name: oceanshield-backend
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    volumes:
+      # Persist JSON data between restarts
+      - oceanshield_data:/app/data
+    environment:
+      # AIS stream
+      AISSTREAM_API_KEY: ${AISSTREAM_API_KEY:-9b28e5453b565b57bb794ef118e2ff16aa259638}
+      AISSTREAM_URL: wss://stream.aisstream.io/v0/stream
+
+      # Bounding boxes — Indian waters only
+      AOI_BBOX_1_LAT_MIN: "5.0"
+      AOI_BBOX_1_LON_MIN: "68.0"
+      AOI_BBOX_1_LAT_MAX: "23.5"
+      AOI_BBOX_1_LON_MAX: "77.5"
+      AOI_BBOX_2_LAT_MIN: "5.0"
+      AOI_BBOX_2_LON_MIN: "77.5"
+      AOI_BBOX_2_LAT_MAX: "22.0"
+      AOI_BBOX_2_LON_MAX: "92.0"
+      AOI_BBOX_3_LAT_MIN: "0.0"
+      AOI_BBOX_3_LON_MIN: "68.0"
+      AOI_BBOX_3_LAT_MAX: "14.0"
+      AOI_BBOX_3_LON_MAX: "95.0"
+
+      # Detection thresholds
+      CONFIRM_SCORE_THRESHOLD: "0.7"
+      ANOMALY_WINDOW_MINUTES: "1"
+      AIS_CORRELATION_RADIUS_KM: "5.0"
+      AIS_CORRELATION_WINDOW_HOURS: "6.0"
+
+      # Paths
+      DATA_DIR: data/db
+      UNET_WEIGHTS_PATH: app/ml/models/unet_weights.pt
+      LOOKALIKE_MODEL_PATH: app/ml/models/lookalike_rf.joblib
+
+      # Open-Meteo (no key needed)
+      OPEN_METEO_URL: https://api.open-meteo.com/v1/forecast
+
+      # ICG webhook — empty = prototype log-only mode
+      ICG_ALERT_WEBHOOK_URL: ""
+
+      # Optional: Copernicus
+      COPERNICUS_CLIENT_ID: ${COPERNICUS_CLIENT_ID:-}
+      COPERNICUS_CLIENT_SECRET: ${COPERNICUS_CLIENT_SECRET:-}
+
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/v1/health"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+
+  # ── Frontend (Vite build → nginx) ─────────────────────────────────
+  frontend:
+    build:
+      context: ./oceanshield-ai
+      dockerfile: Dockerfile
+      args:
+        # Tell the browser where the backend lives.
+        # In docker-compose, both services share a network, but the
+        # browser makes requests from the user's machine, so we point
+        # to localhost:8000 (the port mapped above).
+        VITE_API_BASE_URL: http://localhost:8000
+    container_name: oceanshield-frontend
+    restart: unless-stopped
+    ports:
+      - "5173:80"
+    depends_on:
+      backend:
+        condition: service_healthy
+
+# ── Named volume ───────────────────────────────────────────────────
+volumes:
+  oceanshield_data:
+    driver: local
