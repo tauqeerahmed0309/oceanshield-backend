@@ -1,0 +1,41 @@
+INFO:     Started server process [12144]
+INFO:     Waiting for application startup.
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Added job "run_anomaly_detection_job" to job store "default"
+INFO:apscheduler.scheduler:Added job "run_daily_sar_poll" to job store "default"
+INFO:apscheduler.scheduler:Scheduler started
+INFO:main:OceanShield AI v0.2.0 started — AIS supervisor running, jobs scheduled. GEE/SENTRY-SAR: disabled (GEE_PROJECT_ID not set)
+INFO:ais_supervisor:Connecting to aisstream.io …
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:ais_supervisor:AIS live feed active — subscribed to 3 bounding box(es)
+INFO:ais_supervisor:AIS: 100 messages ingested
+INFO:ais_supervisor:AIS: 200 messages ingested
+INFO:ais_supervisor:AIS: 300 messages ingested
+INFO:ais_supervisor:AIS: 400 messages ingested
+INFO:ais_supervisor:AIS: 500 messages ingested
+INFO:ais_supervisor:AIS: 600 messages ingested
+INFO:ais_supervisor:AIS: 700 messages ingested
+INFO:ais_supervisor:AIS: 800 messages ingested
+INFO:ais_supervisor:AIS: 900 messages ingested
+INFO:ais_supervisor:AIS: 1000 messages ingested
+INFO:ais_supervisor:AIS: 1100 messages ingested
+INFO:ais_supervisor:AIS: 1200 messages ingested
+WARNING:ais_supervisor:AIS connection closed with error (sent 1011 (internal error) keepalive ping timeout; no close frame received) — reconnecting
+INFO:ais_supervisor:Connecting to aisstream.io …
+INFO:ais_supervisor:AIS live feed active — subscribed to 3 bounding box(es)
+INFO:ais_supervisor:AIS: 100 messages ingested
+INFO:ais_supervisor:AIS: 200 messages ingested
+INFO:ais_supervisor:AIS: 300 messages ingested
+INFO:ais_supervisor:AIS: 400 messages ingested
+INFO:ais_supervisor:AIS: 500 messages ingested
+INFO:ais_supervisor:AIS: 600 messages ingested
+INFO:ais_supervisor:AIS: 700 messages ingested
+INFO:ais_supervisor:AIS: 800 messages ingested
+INFO:ais_supervisor:AIS: 900 messages ingested
+INFO:ais_supervisor:AIS: 1000 messages ingested
+INFO:ais_supervisor:AIS: 1100 messages ingested
+WARNING:ais_supervisor:AIS connection closed with error (sent 1011 (internal error) keepalive ping timeout; no close frame received) — reconnecting
+INFO:ais_supervisor:Connecting to aisstream.io …
+INFO:ais_supervisor:AIS live feed active — subscribed to 3 bounding box(es)

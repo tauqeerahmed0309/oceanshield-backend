@@ -1,0 +1,63 @@
+# ──────────────────────────────────────────────────────────────────
+# OceanShield AI — backend dependencies
+# Pin major versions; update intentionally, not automatically.
+# ──────────────────────────────────────────────────────────────────
+
+# Web framework
+fastapi==0.111.1
+uvicorn[standard]==0.30.1
+
+# WebSocket (AIS ingestion)
+websockets==12.0
+
+# HTTP client (weather, Copernicus, ICG webhook)
+requests==2.32.3
+httpx==0.27.0            # async HTTP — available for future async clients
+
+# Data validation / settings
+pydantic==2.7.4
+pydantic-settings==2.3.4
+
+# Task scheduling
+apscheduler==3.10.4
+
+# Env file loading
+python-dotenv==1.0.1
+
+# ── Machine Learning ───────────────────────────────────────────────
+
+scikit-learn==1.5.0
+numpy==1.26.4
+scipy==1.13.1
+joblib==1.4.2
+
+# Deep learning (U-Net segmentation)
+# CPU-only wheels are much smaller; swap for gpu extras if needed:
+#   torch==2.3.1+cu118 --index-url https://download.pytorch.org/whl/cu118
+torch==2.3.1
+torchvision==0.18.1
+
+# ── SAR / Geospatial ───────────────────────────────────────────────
+
+# Raster I/O (local GeoTIFF, Copernicus path)
+rasterio==1.3.10
+
+# Image processing
+opencv-python-headless==4.10.0.84
+scikit-image==0.23.2
+
+# Vector / spatial operations
+geopandas==0.14.4
+shapely==2.0.5
+
+# ── Google Earth Engine (SENTRY-SAR path) ─────────────────────────
+# earthengine-api brings its own oauth2client / google-auth stack.
+earthengine-api==0.1.413
+
+# ── Reporting ──────────────────────────────────────────────────────
+# PDF generation — optional; server still works without it (falls back
+# to Markdown).  Comment out if you want a lighter install.
+reportlab==4.2.2
+
+# ── Utilities ─────────────────────────────────────────────────────
+python-multipart==0.0.9  # multipart form uploads (POST /spills/analyze-image)
