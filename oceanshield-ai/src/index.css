@@ -1,0 +1,144 @@
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+
+@theme {
+  --color-marine-950: #f0f9ff; /* Light blue background */
+  --color-marine-900: #e0f2fe; /* Light panel background */
+  --color-marine-850: #f0f7ff; /* Light hover cell highlight */
+  --color-marine-800: #bae6fd; /* Light card border */
+  --color-marine-700: #7dd3fc; /* Muted highlights */
+  --color-marine-600: #0ea5e9; /* Sky accent */
+  --color-marine-500: #0284c7; /* Deep sky accent */
+  
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  
+  --animate-pulse-fast: pulse 1.2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Custom class for scrollable panels */
+.custom-scrollbar {
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 #f1f5f9;
+}
+
+/* Leaflet light theme styling */
+.leaflet-container {
+  background: #f0f9ff !important;
+}
+
+/* Custom popup styling */
+.leaflet-popup-content-wrapper {
+  background: #ffffff !important;
+  color: #1e293b !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 8px !important;
+  font-family: 'Inter', sans-serif !important;
+  box-shadow: 0 4px 14px 0 rgba(14, 116, 144, 0.1) !important;
+}
+.leaflet-popup-tip {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+}
+
+/* Pulsing markers */
+.pulsing-red-glow {
+  box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.8);
+  animation: pulse-red 1.2s infinite;
+  border-radius: 50%;
+}
+
+@keyframes pulse-red {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.9);
+  }
+  70% {
+    transform: scale(1.15);
+    box-shadow: 0 0 0 10px rgba(239, 68, 68, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+  }
+}
+
+.pulsing-orange-glow {
+  box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.8);
+  animation: pulse-orange 1.5s infinite;
+  border-radius: 50%;
+}
+
+@keyframes pulse-orange {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.9);
+  }
+  70% {
+    transform: scale(1.08);
+    box-shadow: 0 0 0 8px rgba(249, 115, 22, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(249, 115, 22, 0);
+  }
+}
+
+/* Radar scanning animation */
+.radar-sweep {
+  background: conic-gradient(from 0deg, rgba(14, 165, 233, 0.2) 0deg, rgba(14, 165, 233, 0) 90deg, rgba(14, 165, 233, 0) 360deg);
+  border-radius: 50%;
+  animation: sweep 4s linear infinite;
+}
+
+@keyframes sweep {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Tech border effects */
+.tech-border-glow {
+  box-shadow: 0 0 8px 0 rgba(14, 165, 233, 0.15);
+}
+
+.tech-panel {
+  position: relative;
+}
+
+.tech-panel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #0ea5e9, transparent);
+  opacity: 0.3;
+}
