@@ -1,0 +1,251 @@
+{
+  "next_id": 10,
+  "records": [
+    {
+      "sar_scene_id": 4,
+      "centroid_lat": 18.9,
+      "centroid_lon": 72.8,
+      "unet_confidence": 0.95,
+      "wind_speed_ms": 2.98,
+      "lookalike_prob": 0.9075,
+      "spatial_weight": 1.0,
+      "ais_boost": 1.92,
+      "persistence_penalty": 1.0,
+      "final_score": 0.4965839999999999,
+      "verdict": "unverified",
+      "filter_breakdown": {
+        "source": "image_upload",
+        "filename": "WhatsApp Image 2026-09-02 at 22.55.38.jpeg",
+        "wind": {
+          "wind_speed_ms": 2.98,
+          "weight": 0.3
+        },
+        "lookalike_prob": 0.9075,
+        "spatial_context": {
+          "distance_to_coast_km": 30.0,
+          "in_known_bloom_zone": false,
+          "weight": 1.0
+        },
+        "ais_crosscheck": {
+          "nearby_anomalies": [
+            {
+              "id": 1,
+              "mmsi": "419001234",
+              "latitude": 18.89,
+              "longitude": 72.84,
+              "anomaly_type": "course_deviation",
+              "anomaly_score": 0.92,
+              "detected_at": "2026-09-02T11:36:42.252026+00:00",
+              "_seeded": true,
+              "_distance_km": 4.352552894167974
+            }
+          ],
+          "boost": 1.92
+        },
+        "persistence": {
+          "max_historical_iou": 0.0,
+          "penalty": 1.0
+        },
+        "final_score": 0.4965839999999999,
+        "verdict": "unverified"
+      },
+      "detected_at": "2026-09-02T17:26:24.653505+00:00",
+      "id": 4
+    },
+    {
+      "sar_scene_id": 5,
+      "centroid_lat": 21.0,
+      "centroid_lon": 72.0,
+      "unet_confidence": 0.95,
+      "wind_speed_ms": 9.33,
+      "lookalike_prob": 0.9075,
+      "spatial_weight": 1.0,
+      "ais_boost": 0.4,
+      "persistence_penalty": 1.0,
+      "final_score": 0.34485,
+      "verdict": "unverified",
+      "filter_breakdown": {
+        "source": "image_upload",
+        "filename": "WhatsApp Image 2026-09-02 at 22.55.38.jpeg",
+        "wind": {
+          "wind_speed_ms": 9.33,
+          "weight": 1.0
+        },
+        "lookalike_prob": 0.9075,
+        "spatial_context": {
+          "distance_to_coast_km": 30.0,
+          "in_known_bloom_zone": false,
+          "weight": 1.0
+        },
+        "ais_crosscheck": {
+          "nearby_anomalies": [],
+          "boost": 0.4
+        },
+        "persistence": {
+          "max_historical_iou": 0.0,
+          "penalty": 1.0
+        },
+        "final_score": 0.34485,
+        "verdict": "unverified"
+      },
+      "detected_at": "2026-09-02T17:27:14.474034+00:00",
+      "id": 5
+    },
+    {
+      "sar_scene_id": 6,
+      "centroid_lat": 21.0,
+      "centroid_lon": 72.0,
+      "unet_confidence": 0.95,
+      "wind_speed_ms": 8.71,
+      "lookalike_prob": 0.9075,
+      "spatial_weight": 1.0,
+      "ais_boost": 0.4,
+      "persistence_penalty": 1.0,
+      "final_score": 0.34485,
+      "verdict": "unverified",
+      "filter_breakdown": {
+        "source": "image_upload",
+        "filename": "WhatsApp Image 2026-09-02 at 22.55.38.jpeg",
+        "wind": {
+          "wind_speed_ms": 8.71,
+          "weight": 1.0
+        },
+        "lookalike_prob": 0.9075,
+        "spatial_context": {
+          "distance_to_coast_km": 30.0,
+          "in_known_bloom_zone": false,
+          "weight": 1.0
+        },
+        "ais_crosscheck": {
+          "nearby_anomalies": [],
+          "boost": 0.4
+        },
+        "persistence": {
+          "max_historical_iou": 0.0,
+          "penalty": 1.0
+        },
+        "final_score": 0.34485,
+        "verdict": "unverified"
+      },
+      "detected_at": "2026-09-02T18:06:55.566995+00:00",
+      "id": 6
+    },
+    {
+      "sar_scene_id": 7,
+      "centroid_lat": 21.0,
+      "centroid_lon": 72.0,
+      "unet_confidence": 0.95,
+      "wind_speed_ms": 8.71,
+      "lookalike_prob": 0.9075,
+      "spatial_weight": 1.0,
+      "ais_boost": 0.4,
+      "persistence_penalty": 1.0,
+      "final_score": 0.34485,
+      "verdict": "unverified",
+      "filter_breakdown": {
+        "source": "image_upload",
+        "filename": "WhatsApp Image 2026-09-02 at 22.55.38.jpeg",
+        "wind": {
+          "wind_speed_ms": 8.71,
+          "weight": 1.0
+        },
+        "lookalike_prob": 0.9075,
+        "spatial_context": {
+          "distance_to_coast_km": 30.0,
+          "in_known_bloom_zone": false,
+          "weight": 1.0
+        },
+        "ais_crosscheck": {
+          "nearby_anomalies": [],
+          "boost": 0.4
+        },
+        "persistence": {
+          "max_historical_iou": 0.0,
+          "penalty": 1.0
+        },
+        "final_score": 0.34485,
+        "verdict": "unverified"
+      },
+      "detected_at": "2026-09-02T18:07:48.520537+00:00",
+      "id": 7
+    },
+    {
+      "sar_scene_id": 8,
+      "centroid_lat": 21.0,
+      "centroid_lon": 72.0,
+      "unet_confidence": 0.95,
+      "wind_speed_ms": 8.71,
+      "lookalike_prob": 0.9075,
+      "spatial_weight": 1.0,
+      "ais_boost": 0.4,
+      "persistence_penalty": 1.0,
+      "final_score": 0.34485,
+      "verdict": "unverified",
+      "filter_breakdown": {
+        "source": "image_upload",
+        "filename": "WhatsApp Image 2026-09-02 at 22.55.38.jpeg",
+        "wind": {
+          "wind_speed_ms": 8.71,
+          "weight": 1.0
+        },
+        "lookalike_prob": 0.9075,
+        "spatial_context": {
+          "distance_to_coast_km": 30.0,
+          "in_known_bloom_zone": false,
+          "weight": 1.0
+        },
+        "ais_crosscheck": {
+          "nearby_anomalies": [],
+          "boost": 0.4
+        },
+        "persistence": {
+          "max_historical_iou": 0.0,
+          "penalty": 1.0
+        },
+        "final_score": 0.34485,
+        "verdict": "unverified"
+      },
+      "detected_at": "2026-09-02T18:07:58.735226+00:00",
+      "id": 8
+    },
+    {
+      "sar_scene_id": 9,
+      "centroid_lat": 21.0,
+      "centroid_lon": 72.0,
+      "unet_confidence": 0.95,
+      "wind_speed_ms": 8.71,
+      "lookalike_prob": 0.9075,
+      "spatial_weight": 1.0,
+      "ais_boost": 0.4,
+      "persistence_penalty": 1.0,
+      "final_score": 0.34485,
+      "verdict": "unverified",
+      "filter_breakdown": {
+        "source": "image_upload",
+        "filename": "WhatsApp Image 2026-09-02 at 22.55.38.jpeg",
+        "wind": {
+          "wind_speed_ms": 8.71,
+          "weight": 1.0
+        },
+        "lookalike_prob": 0.9075,
+        "spatial_context": {
+          "distance_to_coast_km": 30.0,
+          "in_known_bloom_zone": false,
+          "weight": 1.0
+        },
+        "ais_crosscheck": {
+          "nearby_anomalies": [],
+          "boost": 0.4
+        },
+        "persistence": {
+          "max_historical_iou": 0.0,
+          "penalty": 1.0
+        },
+        "final_score": 0.34485,
+        "verdict": "unverified"
+      },
+      "detected_at": "2026-09-02T18:08:04.720177+00:00",
+      "id": 9
+    }
+  ]
+}

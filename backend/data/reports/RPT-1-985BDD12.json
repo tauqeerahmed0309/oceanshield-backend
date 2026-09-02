@@ -1,0 +1,47 @@
+{
+  "reportId": "RPT-1-985BDD12",
+  "generatedAt": "2026-09-02T13:01:46.007421+00:00",
+  "incidentId": "1",
+  "incident": {
+    "id": 1,
+    "spill_candidate_id": 1,
+    "latitude": 18.89,
+    "longitude": 72.84,
+    "risk_score": 0.94,
+    "attributed_mmsi": "419001234",
+    "attributed_vessel_name": "OCEAN VOYAGER",
+    "attribution_confidence": 88.0,
+    "status": "confirmed_public",
+    "icg_notified_at": "2026-09-02 08:59:11.652212+00:00",
+    "icg_acknowledged_at": "2026-09-02 09:29:11.652212+00:00",
+    "public_released_at": "2026-09-02 09:29:11.652212+00:00",
+    "created_at": "2026-09-02 08:29:11.652212+00:00",
+    "_title": "Offshore Slick Detection - Arabian Sea Sector 4",
+    "_sensor_source": "Sentinel-1A SAR (C-band VV)",
+    "_area_sq_km": 14.8,
+    "_evidence_count": 5
+  },
+  "spillCandidate": {
+    "id": 1,
+    "sar_scene_id": 1,
+    "centroid_lat": 18.89,
+    "centroid_lon": 72.84,
+    "unet_confidence": 0.94,
+    "wind_speed_ms": 4.4,
+    "lookalike_prob": 0.91,
+    "spatial_weight": 1.0,
+    "ais_boost": 1.92,
+    "persistence_penalty": 1.0,
+    "final_score": 0.94,
+    "verdict": "confirmed",
+    "filter_breakdown": {
+      "source": "copernicus_sentinel1",
+      "sentry_sar": {
+        "area_px": 1480,
+        "confidence": 0.94
+      }
+    },
+    "detected_at": "2026-09-02 08:29:11.652212+00:00"
+  },
+  "notes": null
+}

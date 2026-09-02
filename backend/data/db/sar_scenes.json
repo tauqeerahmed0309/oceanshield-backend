@@ -1,0 +1,116 @@
+{
+  "next_id": 10,
+  "records": [
+    {
+      "id": 1,
+      "scene_id": "S1A_IW_GRDH_1SDV_20260901T144512",
+      "source": "copernicus",
+      "file_path": "",
+      "aoi_lat_min": 17.0,
+      "aoi_lon_min": 71.5,
+      "aoi_lat_max": 20.0,
+      "aoi_lon_max": 74.0,
+      "scene_timestamp": "2026-09-02T12:36:42.252026+00:00",
+      "fetched_at": "2026-09-02T13:36:42.252026+00:00",
+      "_seeded": true
+    },
+    {
+      "id": 2,
+      "scene_id": "S1A_IW_GRDH_1SDV_20260830T144512",
+      "source": "copernicus",
+      "file_path": "",
+      "aoi_lat_min": 12.5,
+      "aoi_lon_min": 79.5,
+      "aoi_lat_max": 14.5,
+      "aoi_lon_max": 81.5,
+      "scene_timestamp": "2026-09-01T10:36:42.252026+00:00",
+      "fetched_at": "2026-09-01T11:36:42.252026+00:00",
+      "_seeded": true
+    },
+    {
+      "id": 3,
+      "scene_id": "S1B_IW_GRDH_1SDV_20260829T143800",
+      "source": "copernicus",
+      "file_path": "",
+      "aoi_lat_min": 20.0,
+      "aoi_lon_min": 85.5,
+      "aoi_lat_max": 22.0,
+      "aoi_lon_max": 87.5,
+      "scene_timestamp": "2026-08-31T08:36:42.252026+00:00",
+      "fetched_at": "2026-08-31T09:36:42.252026+00:00",
+      "_seeded": true
+    },
+    {
+      "scene_id": "upload_WhatsApp Image 2026-09-02 at 22.55.38.jpeg_1788369984",
+      "source": "upload",
+      "file_path": "data\\uploads\\WhatsApp Image 2026-09-02 at 22.55.38.jpeg",
+      "aoi_lat_min": 18.4,
+      "aoi_lon_min": 72.3,
+      "aoi_lat_max": 19.4,
+      "aoi_lon_max": 73.3,
+      "scene_timestamp": "2026-09-02T17:26:24.653505+00:00",
+      "fetched_at": "2026-09-02T17:26:24.653505+00:00",
+      "id": 4
+    },
+    {
+      "scene_id": "upload_WhatsApp Image 2026-09-02 at 22.55.38.jpeg_1788370034",
+      "source": "upload",
+      "file_path": "data\\uploads\\WhatsApp Image 2026-09-02 at 22.55.38.jpeg",
+      "aoi_lat_min": 20.5,
+      "aoi_lon_min": 71.5,
+      "aoi_lat_max": 21.5,
+      "aoi_lon_max": 72.5,
+      "scene_timestamp": "2026-09-02T17:27:14.474034+00:00",
+      "fetched_at": "2026-09-02T17:27:14.474034+00:00",
+      "id": 5
+    },
+    {
+      "scene_id": "upload_WhatsApp Image 2026-09-02 at 22.55.38.jpeg_1788372415",
+      "source": "upload",
+      "file_path": "data\\uploads\\WhatsApp Image 2026-09-02 at 22.55.38.jpeg",
+      "aoi_lat_min": 20.5,
+      "aoi_lon_min": 71.5,
+      "aoi_lat_max": 21.5,
+      "aoi_lon_max": 72.5,
+      "scene_timestamp": "2026-09-02T18:06:55.566995+00:00",
+      "fetched_at": "2026-09-02T18:06:55.566995+00:00",
+      "id": 6
+    },
+    {
+      "scene_id": "upload_WhatsApp Image 2026-09-02 at 22.55.38.jpeg_1788372468",
+      "source": "upload",
+      "file_path": "data\\uploads\\WhatsApp Image 2026-09-02 at 22.55.38.jpeg",
+      "aoi_lat_min": 20.5,
+      "aoi_lon_min": 71.5,
+      "aoi_lat_max": 21.5,
+      "aoi_lon_max": 72.5,
+      "scene_timestamp": "2026-09-02T18:07:48.520537+00:00",
+      "fetched_at": "2026-09-02T18:07:48.520537+00:00",
+      "id": 7
+    },
+    {
+      "scene_id": "upload_WhatsApp Image 2026-09-02 at 22.55.38.jpeg_1788372478",
+      "source": "upload",
+      "file_path": "data\\uploads\\WhatsApp Image 2026-09-02 at 22.55.38.jpeg",
+      "aoi_lat_min": 20.5,
+      "aoi_lon_min": 71.5,
+      "aoi_lat_max": 21.5,
+      "aoi_lon_max": 72.5,
+      "scene_timestamp": "2026-09-02T18:07:58.735226+00:00",
+      "fetched_at": "2026-09-02T18:07:58.735226+00:00",
+      "id": 8
+    },
+    {
+      "scene_id": "upload_WhatsApp Image 2026-09-02 at 22.55.38.jpeg_1788372484",
+      "source": "upload",
+      "file_path": "data\\uploads\\WhatsApp Image 2026-09-02 at 22.55.38.jpeg",
+      "aoi_lat_min": 20.5,
+      "aoi_lon_min": 71.5,
+      "aoi_lat_max": 21.5,
+      "aoi_lon_max": 72.5,
+      "scene_timestamp": "2026-09-02T18:08:04.720177+00:00",
+      "fetched_at": "2026-09-02T18:08:04.720177+00:00",
+      "id": 9
+    }
+  ]
+}
