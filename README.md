@@ -396,7 +396,7 @@ Returns: full pipeline breakdown including U-Net confidence, wind check, lookali
 
 ---
 
-## Contributing
+## Contributing 
 
 1. Fork the repository
 2. Create a feature branch: `git checkout -b feature/amazing-feature`
